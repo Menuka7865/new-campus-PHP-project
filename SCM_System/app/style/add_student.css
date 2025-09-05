@@ -1,0 +1,113 @@
+* {
+    font-family: sans-serif;
+}
+
+.maincontent h2 {
+    font-size: 30px;
+    margin-left: 55%;
+    color: black;
+    margin-top: 5px;
+}
+
+.maincontent button {
+    background: none;
+    border: solid 2px #520103;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 85%;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.maincontent a {
+    text-decoration: none;
+    color: black;
+}
+
+.maincontent a:hover {
+    color: white;
+}
+
+.maincontent button:hover {
+    background: #520103;
+    background-color: #520103;
+    color: #ffffff;
+}
+
+.form-container {
+    margin-left: 40%;
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px solid #520103;
+    border-radius: 10px;
+    width: 40%;
+    background-color: #fff;
+}
+
+.form-container h2 {
+    text-align: center;
+    color: #520103;
+    margin-bottom: 20px;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #520103;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-container button[type="submit"] {
+    background-color: #520103;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-left: -2px;
+}
+
+.form-container button[type="submit"]:hover {
+    background-color: #6b2d2d;
+}
+
+@media (max-width: 480px) {
+    .maincontent h2 {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        text-align: center;
+        font-size: 28px;
+        padding-top: 8px;
+    }
+
+    .maincontent button {
+        margin-left: 200px !important;
+        margin-right: 10px !important;
+        display: inline-block;
+        position: relative;
+        top: 0;
+    }
+
+    .form-container {
+        margin-left: 5%;
+        width: 75%;
+        margin-top: 15%;
+    }
+    .form-container button[type="submit"] {
+        margin-left: 0 !important;
+    }
+}

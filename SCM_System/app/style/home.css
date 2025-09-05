@@ -1,0 +1,166 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* Reset common element margins that can create unexpected gaps */
+p, h1, h2, h3, h4, h5, h6 { margin: 0; }
+
+.header{
+    width: 100%;
+    background: #520103;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 0.75rem; /* reduced padding */
+}
+/* make sure header doesn't collapse margins with following content */
+.header { margin-bottom: 0; }
+
+.headername{
+    color: white;
+    font-size: 18px;
+    margin-left: 2rem;
+    margin-top: 6px;
+}
+.spanname{
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 8px;
+    margin-bottom: 6px;
+}
+.spanname button{
+    background-color: #520103;
+    border: solid 2px #ffffff;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 50px;
+    cursor: pointer;
+    border-radius: 5px;
+    float: right;
+    margin-bottom: 10px;
+    margin-top: -10px;
+
+}
+.spanname button a{
+    text-decoration: none;
+    color: white;
+}
+.spanname button:hover{
+    background-color: #ffffff;
+    border: solid 2px #520103;
+    transition: 0.3s;
+    color: #520103;
+
+}
+.spanname button a:hover{
+    color: #520103;
+}
+.maincontent{
+    margin: 0; /* prevent gaps caused by collapsing margins */
+    height: 650px;
+    background-image: url('../assets/coverphoto.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+img, video { max-width: 100%; height: auto; }
+.maincontent p{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 100px;
+    margin-bottom: 20px;
+}
+.maincontent h5{
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: -10px;
+    
+}
+.bottmp{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 10px;
+    margin-bottom: 20px;
+}
+.maincontent button{
+    background: none;
+    border: solid 2px #520103;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 50px;
+    cursor: pointer;
+    border-radius: 5px;
+    float: right;
+    margin-top: -40px;
+    
+    
+}
+
+.carousel-container{
+    width: 85%;
+    max-width: 700px;     
+    margin: 0 auto;       
+    padding: 1rem 0;      
+}
+
+@media (max-width: 600px) {
+   
+    .headername {
+        font-size: 16px;
+        margin-left: 20px;
+    }
+    .spanname {
+        font-size: 20px;
+        margin-left: 10px;
+    }
+    .spanname button {
+        font-size: 14px;
+        padding: 4px 8px;
+        margin-right: 20px;
+    }
+    .carousel-container{
+        width: 95%;
+        max-width: 400px;     
+        margin: 0 auto;       
+        padding: 4rem 0;
+    }
+    .maincontent{
+        height: 600px;
+    }
+    .maincontent button{
+        font-size: 14px;
+        padding: 8px;
+        margin-right: 130px;
+        margin-top: 50px;
+    }
+    .bottmp{
+        font-size: 24px;
+        padding-top: 0px;
+    }
+
+    
+    
+}
+
+

@@ -1,0 +1,169 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* Reset common element margins that can create unexpected gaps */
+p, h1, h2, h3, h4, h5, h6 { margin: 0; }
+
+.header{
+    width: 100%;
+    background: #520103;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 0.75rem; /* reduced padding */
+}
+/* make sure header doesn't collapse margins with following content */
+.header { margin-bottom: 0; }
+
+.headername{
+    color: white;
+    font-size: 18px;
+    margin-left: 2rem;
+    margin-top: 6px;
+}
+.spanname{
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 8px;
+    margin-bottom: 6px;
+}
+.spanname button{
+    background-color: #520103;
+    border: solid 2px #ffffff;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 50px;
+    cursor: pointer;
+    border-radius: 5px;
+    float: right;
+    margin-bottom: 10px;
+    margin-top: -10px;
+
+}
+.spanname button a{
+    text-decoration: none;
+    color: white;
+}
+.spanname button:hover{
+    background-color: #ffffff;
+    border: solid 2px #520103;
+    transition: 0.3s;
+    color: #520103;
+
+}
+.spanname button a:hover{
+    color: #520103;
+}
+.loginbox{
+    width: 450px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #ffffff; /* white card */
+    padding: 70px 48px;
+    box-sizing: border-box;
+    border: 2px solid #520103; /* thin burgundy border */
+    border-radius: 36px; /* large rounded corners like the design */
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    text-align: center;
+}
+
+.loginbox h1 {
+    font-size: 42px;
+    margin-bottom: 26px;
+    color: #111;
+    font-weight: 400;
+}
+
+.loginbox form p {
+    text-align: left;
+    margin: 10px 0 6px 0;
+    color: #111;
+    font-size: 14px;
+}
+
+.loginbox form input[type="text"],
+.loginbox form input[type="password"]{
+    display: block;
+    width: 86%;
+    margin: 6px auto 18px auto;
+    padding: 16px 18px;
+    border-radius: 10px;
+    background: #dbdbdb; /* subtle gray inputs like the screenshot */
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.loginbox form input[type="submit"]{
+    display: block;
+    width: 86%;
+    margin: 18px auto 8px auto;
+    padding: 12px 16px;
+    border-radius: 10px;
+    background: #520103;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.loginbox a {
+    display: inline-block;
+    color: #1a73e8; /* blue link color like screenshot */
+    text-decoration: none;
+    margin-top: 8px;
+}
+
+.loginbox .error{
+    color: #b00020;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+@media (max-width: 600px) {
+   
+    .headername {
+        font-size: 16px;
+        margin-left: 20px;
+    }
+    .spanname {
+        font-size: 20px;
+        margin-left: 10px;
+    }
+    .spanname button {
+        font-size: 14px;
+        padding: 4px 8px;
+        margin-right: 20px;
+    }
+    
+    .maincontent{
+        height: 600px;
+    }
+    .loginbox {
+        width: 90%;
+        padding: 20px;
+        border-radius: 20px;
+    }
+    
+
+    
+    
+}
