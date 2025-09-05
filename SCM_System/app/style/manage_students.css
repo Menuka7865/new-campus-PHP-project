@@ -63,7 +63,234 @@ th {
 td a img {
     margin-right: 10px;
 }
+.modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(2px);
+    }
 
+    .modal-content {
+        background-color: #fefefe;
+        margin: 5% auto;
+        padding: 20px;
+        border: none;
+        border-radius: 8px;
+        width: 90%;
+        max-width: 500px;
+        max-height: 90vh;
+        overflow-y: auto;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        animation: modalSlideIn 0.3s ease-out;
+    }
+
+    @keyframes modalSlideIn {
+        from {
+            transform: translateY(-50px);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+        line-height: 1;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+    }
+
+    .modal h2 {
+        margin-top: 0;
+        color: #333;
+        border-bottom: 2px solid #007bff;
+        padding-bottom: 10px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #555;
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 14px;
+        box-sizing: border-box;
+    }
+
+    .form-group input:focus {
+        border-color: #007bff;
+        outline: none;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    }
+
+    .modal-buttons {
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        min-width: 80px;
+        transition: background-color 0.3s;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        color: white;
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+
+    .btn-secondary {
+        background-color: #6c757d;
+        color: white;
+    }
+
+    .btn-secondary:hover {
+        background-color: #545b62;
+    }
+
+    .btn-danger {
+        background-color: #dc3545;
+        color: white;
+    }
+
+    .btn-danger:hover {
+        background-color: #c82333;
+    }
+
+    .delete-confirmation {
+        text-align: center;
+    }
+
+    .delete-confirmation p {
+        margin: 20px 0;
+        font-size: 16px;
+        color: #333;
+    }
+
+    .student-info {
+        background-color: #f8f9fa;
+        padding: 15px;
+        border-radius: 4px;
+        margin: 15px 0;
+        border-left: 4px solid #dc3545;
+    }
+
+    .loading {
+        display: none;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .loading::after {
+        content: '';
+        width: 20px;
+        height: 20px;
+        border: 2px solid #f3f3f3;
+        border-top: 2px solid #007bff;
+        border-radius: 50%;
+        display: inline-block;
+        animation: spin 1s linear infinite;
+        margin-left: 10px;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    .alert {
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 4px;
+        display: none;
+    }
+
+    .alert-success {
+        background-color: #d4edda;
+        color: #155724;
+        border: 1px solid #c3e6cb;
+    }
+
+    .alert-error {
+        background-color: #f8d7da;
+        color: #721c24;
+        border: 1px solid #f5c6cb;
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+        .modal-content {
+            margin: 10% auto;
+            padding: 15px;
+            width: 95%;
+        }
+
+        .modal-buttons {
+            flex-direction: column;
+        }
+
+        .btn {
+            width: 100%;
+            margin-bottom: 5px;
+        }
+
+        .form-group input {
+            font-size: 16px;
+            /* Prevents zoom on iOS */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .modal-content {
+            margin: 5% auto;
+            padding: 10px;
+        }
+
+        .close {
+            font-size: 24px;
+        }
+    }
 @media (max-width: 480px) {
     .maincontent button {
         margin-left: 200px !important;

@@ -1,6 +1,6 @@
-<?php
+<!-- <?php
 session_start();
-?>
+?> -->
 
 <div class="sidebar" id="sidebar">
     <h2>Colors of Excellence <br /><span class="uppername">SUSL</span></h2>
@@ -19,7 +19,7 @@ session_start();
             <label> <a href="/SCM_System/app/pages/manage_colors.php">Manage</a></label>
         </div>
     </div>
-    <button> <a href="/SCM_System/app/pages/login.php" class="btn">logout</a></button>
+    <button> <a href="/SCM_System/app/pages/login.php" class="btns">logout</a></button>
 </div>
 
 <style>
@@ -138,11 +138,11 @@ session_start();
     display: block;
 }
 
-.btn {
+.btns {
     text-decoration: none;
 }
 
-.btn:hover {}
+.btns:hover {}
 
 @media screen and (min-width: 768px) {
     .sidebar {

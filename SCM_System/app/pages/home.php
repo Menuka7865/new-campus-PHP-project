@@ -56,7 +56,7 @@
                 </a>
             </div>
         </div>
-        <h3 class="bottmp">Students of the months</h3>
+        <h3 class="bottmp">Students of the month</h3>
         <a href="/SCM_System/app/pages/manage_colors.php"><button>Visit Ranking</button></a>
     </div>
 
